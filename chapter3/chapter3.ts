@@ -1,37 +1,22 @@
-//////////////// 25 Break //////////////
+//////////////// 26 Continue  //////////////
 
-// #1
-// let products = [
-//     { name: "phone", price: 700 },
-//     { name: "tablet", price: 900 },
-//     { name: "laptop", price: 1200 },
-// ];
-
-// for (let i = 0; i < products.length; i++) {
-//     if (products[i].price == 900) break;
-//     console.log(products[i]);
+// for (let index = 0; index < 9; index++) {
+//     if (index % 2) continue;
+//     console.log(index);
 // }
 
-// #2
-let products = [
-    { name: "phone", price: 700 },
-    { name: "tablet", price: 900 },
-    { name: "laptop", price: 1200 },
-];
+// let index = -1;
+// while (index < 9) {
+//     index = index + 1;
+//     if (index % 2) continue;
+//     console.log(index);
+// }
 
-let discount = 0;
-let product = products[1];
-switch (product.name) {
-    case "phone":
-        discount = 5;
-        break;
-    case "tablet":
-        discount = 10;
-        break;
-    case "laptop":
-        discount = 15;
-        break;
-    default:
-        discount = 100;
-}
-console.log(`There is a ${discount}% on ${product.name}.`);
+let index = 9;
+let count = 0;
+do {
+    index += 1;
+    if (index % 2) continue;
+    count += 1;
+} while (index < 99);
+console.log(count); // 45
