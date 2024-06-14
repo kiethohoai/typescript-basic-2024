@@ -1,5 +1,3 @@
-let name = 'eric'; //string
-
-name = 35; //number
-
-name = false; //boolean
+let data = "hue";
+data = 75;
+data = true;

@@ -1,4 +1,3 @@
-let namev2: any = 'Eric'; // any everywhere
-
-namev2 = true;
-
+let data1: any = "mini";
+data1 = true;
+data1 = 73;
