@@ -22,5 +22,5 @@ function addNumberOrString(a: number | string, b: number | string) {
     throw new Error("Parameters must be numbers or strings");
 }
 
-let temp = addNumberOrString(1, "hai");
+let temp = addNumberOrString(true, "hai");
 console.log("🚀CHECK  temp =>", temp);
