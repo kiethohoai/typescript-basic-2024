@@ -1,4 +1,4 @@
-// ////////////// #20 TypeScript If else ///////////////
+////////////// #20 TypeScript If else ///////////////
 // let age: number = 30;
 // if (age > 18) {
 //     console.log("Your Good Age!");
@@ -6,7 +6,7 @@
 //     console.log("Your Bad Age!");
 // }
 
-// ////////////// #21 TypeScript Switch Case ///////////////
+////////////// #21 TypeScript Switch Case ///////////////
 // const myAge: number = 30;
 
 // switch (myAge) {
@@ -23,14 +23,25 @@
 //         console.log("How old are you?");
 // }
 
-// ////////////// 22 - TypeScript For Loop //////////////
+////////////// 22 - TypeScript For Loop //////////////
 // for (let i = 0; i < 10; i++) {
 //     console.log("🚀CHECK  i =>", i);
 // }
 
-// //////////////// 23 -  While Loop //////////////
+//////////////// 23 -  While Loop //////////////
 // let count = 0;
 // while (count < 10) {
 //     console.log("🚀CHECK  count =>", count);
 //     count++;
 // }
+
+//////////////// 24 Do While //////////////
+
+// let i: number = 1;
+// do {
+//     console.log("🚀CHECK  i =>", i);
+//     if (i === 3) {
+//         break;
+//     }
+//     i++;
+// } while (i <= 5);
