@@ -1,22 +1,10 @@
-//////////////// 26 Continue  //////////////
+//////////////// 29 TypeScript Optional Parameters //////////////
+const sum = (a: number, b: number, c?: number): number => {
+    if (c) {
+        return a + b + c;
+    }
 
-// for (let index = 0; index < 9; index++) {
-//     if (index % 2) continue;
-//     console.log(index);
-// }
+    return a + b;
+};
 
-// let index = -1;
-// while (index < 9) {
-//     index = index + 1;
-//     if (index % 2) continue;
-//     console.log(index);
-// }
-
-let index = 9;
-let count = 0;
-do {
-    index += 1;
-    if (index % 2) continue;
-    count += 1;
-} while (index < 99);
-console.log(count); // 45
+console.log("🚀CHECK  sum =>", sum(1, 2));
