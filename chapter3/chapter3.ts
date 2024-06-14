@@ -1,6 +1,10 @@
-//////////////// 22 -  While Loop //////////////
-let count = 0;
-while (count < 10) {
-    console.log("🚀CHECK  count =>", count);
-    count++;
-}
+//////////////// 24 Do While //////////////
+
+let i: number = 1;
+do {
+    console.log("🚀CHECK  i =>", i);
+    if (i === 3) {
+        break;
+    }
+    i++;
+} while (i <= 5);
