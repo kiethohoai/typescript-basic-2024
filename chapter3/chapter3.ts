@@ -1,4 +1,6 @@
-////////////// 22 - TypeScript For Loop //////////////
-for (let i = 0; i < 10; i++) {
-    console.log("🚀CHECK  i =>", i);
+//////////////// 22 -  While Loop //////////////
+let count = 0;
+while (count < 10) {
+    console.log("🚀CHECK  count =>", count);
+    count++;
 }
