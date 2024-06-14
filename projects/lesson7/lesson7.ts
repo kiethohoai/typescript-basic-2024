@@ -1,7 +1,9 @@
-let count: string = "Hoi Dan IT";
+// let count: string = "Ho Hoai Kiet";
+// console.log("🚀CHECK  count =>", count);
 
-console.log(">>> check count 0 = ", count)
+// let test = ["kiet", "master ho", "david ho", 123];
+// test.push(25);
+// console.log("🚀CHECK  test =>", test);
 
-let test = ['eric', 'hoi danit', 'typescirpt', 96];
-
-test.push(25);
+// let name: number = 265456456;
+// console.log("🚀CHECK  name =>", name);
