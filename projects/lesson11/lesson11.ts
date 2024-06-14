@@ -1,20 +1,32 @@
 // let person: object;
+// person = { name: "Ho Hoai Kiet" };
+// console.log("🚀CHECK  person =>", person);
 
-// let mine3 = {name : 'hoi dan it'}
+// let person1 = { name: "Ho Hoai Nam" };
+// console.log("🚀CHECK  person1 =>", person1);
+// console.log("🚀CHECK  person1 =>", typeof person1);
 
-// person = { name: 'Eric'};
-// person = 'Eric'
+// let person2: {} = { name: "Ho Hoai Sinh" };
+// console.log("🚀CHECK  person2 =>", person2);
+// console.log("🚀CHECK  person2 =>", typeof person2);
 
-// let pro = {
-//     name: "Eric", //string
-//     age: 25 //age
-// }
+let person3: {
+    name: string;
+    age: number;
+};
 
-let pro1: {
-    name: string,
-    age: number
+person3 = {
+    name: "Ho Hoai Kiet",
+    age: 30,
+};
+console.log("🚀CHECK  person3 =>", person3);
+
+let person4: {
+    name: string;
+    age: number;
 } = {
-    name: "Eric", //string
-    age: 25 //age
-}
+    name: "Ho Hoai Kiet",
+    age: 30,
+};
+console.log("🚀CHECK  person4 =>", person4);
 
