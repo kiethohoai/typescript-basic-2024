@@ -1,28 +1,43 @@
-//////////////// 36 TypeScript Getters and Setters //////////////
+//////////////// 37 TypeScript Inheritance //////////////
 class Person {
-    private _age: number;
-    public fname: string;
-    public address: string;
+    fname: string;
+    lname: string;
 
-    constructor(age: number, fname: string, address: string) {
-        this._age = age;
+    constructor(fname: string, lname: string) {
         this.fname = fname;
-        this.address = address;
+        this.lname = lname;
     }
 
-    get age() {
-        return this._age;
+    getFullName() {
+        return `FullName: ${this.fname} ${this.lname}`;
     }
 
-    set age(inputAge) {
-        if (inputAge < 0 || inputAge > 150) {
-            throw Error("Invalid Age!");
-        }
-        this._age = inputAge;
+    discribe() {
+        return `This is ${this.fname} ${this.lname}`;
     }
 }
 
-const dataPerson = new Person(30, "Ho Hoai Kiet", "Thua Thien Hue");
-dataPerson.age = 100;
-console.log("🚀CHECK  dataPerson =", dataPerson);
-console.log("🚀CHECK  dataPerson.age =", dataPerson.age);
+class Owner extends Person {
+    private jobTitle: string;
+    constructor(fname: string, lname: string, jobTitle: string) {
+        super(fname, lname);
+        this.jobTitle = jobTitle;
+    }
+
+    get getJobTitle(): string {
+        return this.jobTitle;
+    }
+
+    set setJobTitle(inputJobTitle: string) {
+        this.jobTitle = inputJobTitle;
+    }
+}
+
+let dataOwner = new Owner("ho hoai", "kiet", "software engineer");
+// dataOwner.discribe()
+// dataOwner.getFullName();
+dataOwner.setJobTitle = "Fullstacks Web Developer";
+console.log("🚀CHECK  dataOwner =", dataOwner);
+console.log("🚀CHECK  dataOwner.discribe() =", dataOwner.discribe());
+console.log("🚀CHECK  dataOwner.getFullName() =", dataOwner.getFullName());
+console.log("🚀CHECK  dataOwner.getJobTitle =", dataOwner.getJobTitle);
