@@ -1,43 +1,15 @@
-//////////////// 37 TypeScript Inheritance //////////////
-class Person {
-    fname: string;
-    lname: string;
+//////////////// 38 TypeScript Static Methods and Properties //////////////
+class Circle {
+    static PI: number = 3.14;
+    public test: number = 69;
 
-    constructor(fname: string, lname: string) {
-        this.fname = fname;
-        this.lname = lname;
-    }
-
-    getFullName() {
-        return `FullName: ${this.fname} ${this.lname}`;
-    }
-
-    discribe() {
-        return `This is ${this.fname} ${this.lname}`;
+    static caculateArea(radius: number) {
+        return this.PI * radius * radius;
     }
 }
 
-class Owner extends Person {
-    private jobTitle: string;
-    constructor(fname: string, lname: string, jobTitle: string) {
-        super(fname, lname);
-        this.jobTitle = jobTitle;
-    }
+// console.log("🚀CHECK  Circle.PI =", Circle.PI);
+// console.log("🚀CHECK  Circle.caculateArea(10) =", Circle.caculateArea(10));
 
-    get getJobTitle(): string {
-        return this.jobTitle;
-    }
-
-    set setJobTitle(inputJobTitle: string) {
-        this.jobTitle = inputJobTitle;
-    }
-}
-
-let dataOwner = new Owner("ho hoai", "kiet", "software engineer");
-// dataOwner.discribe()
-// dataOwner.getFullName();
-dataOwner.setJobTitle = "Fullstacks Web Developer";
-console.log("🚀CHECK  dataOwner =", dataOwner);
-console.log("🚀CHECK  dataOwner.discribe() =", dataOwner.discribe());
-console.log("🚀CHECK  dataOwner.getFullName() =", dataOwner.getFullName());
-console.log("🚀CHECK  dataOwner.getJobTitle =", dataOwner.getJobTitle);
+let dataCircle = new Circle();
+console.log("🚀CHECK  dataCircle.test =", dataCircle.test);
