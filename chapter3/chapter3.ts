@@ -1,7 +1,21 @@
-//////////////// 31 TypeScript Function Overloading //////////////
+//////////////// 33 TypeScript "Classes" //////////////
 
-function Data(a: any, b: any) {
-    return a + b;
+class Person {
+    id: number;
+    fname: string;
+    lname: string;
+
+    constructor(id: number, fname: string, lname: string) {
+        this.id = id;
+        this.fname = fname;
+        this.lname = lname;
+    }
+
+    getFullName(): string {
+        return `${this.id} ${this.fname} ${this.lname}`;
+    }
 }
 
-console.log("🚀CHECK  Data =>", Data(10, 90), Data("10", true));
+const Data = new Person(132, "Hoai", "Kiet");
+console.log("🚀CHECK  Data =>", Data);
+console.log("🚀CHECK  Data.getFullName =>", Data.getFullName());
