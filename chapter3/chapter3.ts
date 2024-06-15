@@ -1,21 +1,15 @@
-//////////////// 33 TypeScript "Classes" //////////////
+//////////////// 34 TypeScript Access Modifiers //////////////
+class Employee {
+    private eCode: string;
+    private eName: string;
 
-class Person {
-    id: number;
-    fname: string;
-    lname: string;
-
-    constructor(id: number, fname: string, lname: string) {
-        this.id = id;
-        this.fname = fname;
-        this.lname = lname;
-    }
-
-    getFullName(): string {
-        return `${this.id} ${this.fname} ${this.lname}`;
+    constructor(eCode: string, eName: string) {
+        this.eCode = eCode;
+        this.eName = eName;
     }
 }
 
-const Data = new Person(132, "Hoai", "Kiet");
-console.log("🚀CHECK  Data =>", Data);
-console.log("🚀CHECK  Data.getFullName =>", Data.getFullName());
+let eData = new Employee("30", "David");
+// eData.eCode = "31";
+// eData.eName = "David at 2025";
+console.log("🚀CHECK  eData =>", eData);
