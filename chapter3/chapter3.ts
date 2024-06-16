@@ -1,24 +1,34 @@
-//////////////// 39 TypeScript Abstract Classes //////////////
-abstract class Father {
-  constructor(public firstName: string, public lastName: string) {
-    //???
-  }
+//////////////// 40 TypeScript Interfaces //////////////
 
-  // abstract method
-  abstract getSalary(): number;
+// #1 - Not use Interface
+// function getFullName(person: { fName: string; lName: string }) {
+//   return `${person.fName} ${person.lName}`;
+// }
 
-  // normal method
-  get fullName(): string {
-    return `${this.firstName} ${this.lastName}`;
-  }
+// let person = {
+//   fName: "Hoai ",
+//   lName: "Kiet",
+// };
 
-  dataEmployee(): string {
-    return `${this.fullName} make ${this.getSalary()} in a month!`;
-  }
+// getFullName(person);
+// console.log("🚀CHECK  getFullName(person) =", getFullName(person));
+
+// #2 use Interface
+interface Person {
+  firstName: string;
+  lastName: string;
 }
 
-abstract class Child extends Father {
-  constructor(firstName: string, lastName: string, private rate: number, private hours: number) {
-    super(firstName, lastName);
-  }
+function getFullName(person: Person) {
+  return `${person.firstName} ${person.lastName}`;
 }
+
+let hhk = {
+  firstName: "Ho Hoai",
+  lastName: "Kiet",
+  age: 30,
+  address: "Thua Thien Hue",
+};
+
+// getFullName(hhk);
+console.log("🚀CHECK  getFullName(hhk) =", getFullName(hhk));
