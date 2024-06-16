@@ -1,15 +1,24 @@
-//////////////// 38 TypeScript Static Methods and Properties //////////////
-class Circle {
-    static PI: number = 3.14;
-    public test: number = 69;
+//////////////// 39 TypeScript Abstract Classes //////////////
+abstract class Father {
+  constructor(public firstName: string, public lastName: string) {
+    //???
+  }
 
-    static caculateArea(radius: number) {
-        return this.PI * radius * radius;
-    }
+  // abstract method
+  abstract getSalary(): number;
+
+  // normal method
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  dataEmployee(): string {
+    return `${this.fullName} make ${this.getSalary()} in a month!`;
+  }
 }
 
-// console.log("🚀CHECK  Circle.PI =", Circle.PI);
-// console.log("🚀CHECK  Circle.caculateArea(10) =", Circle.caculateArea(10));
-
-let dataCircle = new Circle();
-console.log("🚀CHECK  dataCircle.test =", dataCircle.test);
+abstract class Child extends Father {
+  constructor(firstName: string, lastName: string, private rate: number, private hours: number) {
+    super(firstName, lastName);
+  }
+}
